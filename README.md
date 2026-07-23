@@ -1,0 +1,90 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+
+![GitHub Tag](https://img.shields.io/github/v/tag/TheShooter89/dijkstra-play)
+
+# dijkstra-play
+
+> [!CAUTION]
+> WORK IN PROGRESS
+> project is still in early stage of development
+
+A simple web app designed to play around with rust crate [`dijkstra-suite`](https://crates.io/crates/dijkstra-suite/)
+
+The main goal of the app is load a CSV file that represents a rectangular tiled map where each tile can be either unwalkable (like a "wall tile")
+or walkable with a given weight, parse it with [`dijkstra-suite`](https://crates.io/crates/dijkstra-suite/) and then visualize the shortest path running to the destination tile
+
+## `dijkstra-suite` crate
+
+This app main purpose is to showcase [`dijkstra-suite`](https://crates.io/crates/dijkstra-suite/) crate
+Check the documentation with example on [docs.rs](https://docs.rs/dijkstra-suite).
+
+[![Crates.io Version](https://img.shields.io/crates/v/dijkstra-suite)](<https://crates.io/crates/dijkstra-suite/>)
+
+[![docs.rs (with version)](https://img.shields.io/docsrs/dijkstra-suite/latest?label=docs.rs)](https://docs.rs/dijkstra-suite/latest/dijkstra_suite/index.html)
+
+[![Crates.io License](https://img.shields.io/crates/l/dijkstra-suite)](https://github.com/TheShooter89/dijkstra-suite/blob/master/LICENSE)
+
+## Quick Start
+
+Install `dioxus-cli`
+
+```sh
+curl -sSL https://dioxus.dev/install.sh | bash
+```
+
+Run the project in develop environment with hot reloading
+
+```sh
+dx serve
+```
+
+## License
+
+[GNU GPL-3](https://choosealicense.com/licenses/gpl-3.0/)
+
+## Authors
+
+written with 💛️💙️ by Tanque
+
+- [@TheShooter89](https://www.github.com/TheShooter89)
+
+## `tanque` Stands With Ukraine 🇺🇦️
+
+    "Freedom doesn't come cheap"
+
+`tanque` stands with people of Ukraine in their fight against the brutal russian aggression and unrightful occupation of their homeland
+
+`tanque` stands with people of Ukraine in their fight for **Freedom**, for **Peace**, for **Self-Determination**, for **Happiness**
+
+`tanque` stands with this generation of young ukrainians robbed away of their youth by the war, who will have to find the strength to get up once again and rebuild from the rubbles
+
+####
+
+*By your side, for as long as it takes* 💪️
+
+        Slava Ukraini 🇺🇦️
+
+### Donate
+
+Please contribute and donate through official government channels or globally-know remarkable institutions:
+
+- **UNITED24**: Institutinal fundraising, charity and media platform of Ukrainian Government. It's possible to donate for food, medicine, medical assistance, refugees support and more
+  
+    [U24 official site](https://u24.gov.ua/)
+
+- **Medecins Sans Frontieres**: Life-saving medical assistance both in war and peace time, all over the world
+  
+    [MSF official site](https://www.msf.org/ukraine)
+
+- **Protect A Volunteer**: Independent matching platform to support a Volunteer on the frontline
+  
+    [Protect a Volunteer site](https://protectavolunteer.com/)
+
+Or use below badge:
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+
+---
+
+    humans die, but IDEAS are bulletproof
+    🇺🇦️ ️🇪🇺️ 🏳️‍🌈️
