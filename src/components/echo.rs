@@ -32,6 +32,7 @@ pub fn Echo() -> Element {
                     response.set(data);
                 },
             }
+            button { id: "daisyui button", class: "btn btn-warning", "PROVA" }
 
             // Signals can be called like a function to clone the current value of the signal
             if !response().is_empty() {
