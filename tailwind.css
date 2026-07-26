@@ -6,3 +6,9 @@
 @plugin "./assets/daisyui/daisyui.mjs" {
   themes: aqua --default;
 }
+
+@plugin "./assets/daisyui/daisyui-theme.mjs" {
+  name: "aqua";
+  default: true;
+  --noise: 1;
+}
