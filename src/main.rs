@@ -38,6 +38,9 @@ const FAVICON: Asset = asset!("/assets/favicon.ico");
 // The asset macro also minifies some assets like CSS and JS to make bundled smaller
 const MAIN_CSS: Asset = asset!("/assets/styling/main.css");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
+const TT_FONT: Asset = asset!("/assets/fonts/tt_interphases_pro_regular.ttf");
+const HARPER_FONT: Asset = asset!("/assets/fonts/harper.otf");
+const BLADE_FONT: Asset = asset!("/assets/fonts/blade.ttf");
 
 fn main() {
     // The `launch` function is the main entry point for a dioxus app. It takes a component and renders it with the platform feature
@@ -58,6 +61,20 @@ fn App() -> Element {
         document::Link { rel: "icon", href: FAVICON }
         document::Link { rel: "stylesheet", href: MAIN_CSS }
         document::Link { rel: "stylesheet", href: TAILWIND_CSS }
+        document::Style { {format!(
+            "@font-face {{
+                font-family: 'TT Interphase';
+                src: url('{TT_FONT}') format('truetype');
+            }}
+            @font-face {{
+                font-family: 'Harper';
+                src: url('{HARPER_FONT}') format('opentype');
+            }}
+            @font-face {{
+                font-family: 'Blade';
+                src: url('{BLADE_FONT}') format('truetype');
+            }}"
+        )} }
 
         // The router component renders the route enum we defined above. It will handle synchronization of the URL and render
         // the layouts and components for the active route.
