@@ -3,4 +3,6 @@
 @source not "./tailwindcss";
 @source not "./daisyui{,*}.mjs";
 
-@plugin "./assets/daisyui/daisyui.mjs";
+@plugin "./assets/daisyui/daisyui.mjs" {
+  themes: aqua --default;
+}
