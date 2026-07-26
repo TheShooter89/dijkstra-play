@@ -7,3 +7,6 @@ pub use hero::Hero;
 
 mod echo;
 pub use echo::Echo;
+
+mod navbar;
+pub use navbar::Navbar;
