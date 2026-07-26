@@ -8,3 +8,6 @@
 
 # daisyui builder folder
 assets/daisyui/
+
+# Tailwind generated css base file
+assets/tailwind.css
