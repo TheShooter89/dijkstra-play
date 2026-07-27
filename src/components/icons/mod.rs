@@ -2,14 +2,11 @@
 //! They can be used to defined common UI elements like buttons, forms, and modals. In this template, we define a Hero
 //! component and an Echo component for fullstack apps to be used in our app.
 
-mod hero;
-pub use hero::Hero;
+mod ua_flag;
+pub use ua_flag::UkraineFlag;
 
-mod echo;
-pub use echo::Echo;
+mod github_logo;
+pub use github_logo::GithubLogo;
 
-mod navbar;
-pub use navbar::Navbar;
-
-pub mod icons;
-pub use icons::*;
+mod crates_io_logo;
+pub use crates_io_logo::CratesIoLogo;

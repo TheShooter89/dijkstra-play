@@ -1,5 +1,5 @@
 use crate::{
-    components::{CratesIoLogo, GithubLogo, UkraineFlag},
+    components::icons::{CratesIoLogo, GithubLogo, UkraineFlag},
     Route,
 };
 use dioxus::prelude::*;
