@@ -36,7 +36,7 @@ pub fn Navbar() -> Element {
                 class: "flex-1",
                 Link {
                     class: "pl-10 btn btn-ghost text-white font-sans text-l text-shadow-sm/20",
-                    to: Route::Home {},
+                    to: Route::Instructions { id: 1 },
                     "Instructions"
                 }
                 Link {

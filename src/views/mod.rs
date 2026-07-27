@@ -14,5 +14,8 @@ pub use home::Home;
 mod blog;
 pub use blog::Blog;
 
+mod instructions;
+pub use instructions::Instructions;
+
 mod layout;
 pub use layout::Layout;
