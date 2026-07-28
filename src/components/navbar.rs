@@ -41,7 +41,7 @@ pub fn Navbar() -> Element {
                 }
                 Link {
                     class: "pl-4 btn btn-ghost text-white font-sans text-l text-shadow-sm/20",
-                    to: Route::Blog { id: 1 },
+                    to: Route::About {},
                     "About"
                 }
             }

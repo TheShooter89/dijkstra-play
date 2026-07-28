@@ -17,5 +17,8 @@ pub use blog::Blog;
 mod instructions;
 pub use instructions::Instructions;
 
+mod about;
+pub use about::About;
+
 mod layout;
 pub use layout::Layout;
