@@ -5,8 +5,17 @@
 mod ua_flag;
 pub use ua_flag::UkraineFlag;
 
+mod dijkstra_play_logo;
+pub use dijkstra_play_logo::DijkstraLogo;
+
 mod github_logo;
 pub use github_logo::GithubLogo;
 
 mod crates_io_logo;
 pub use crates_io_logo::CratesIoLogo;
+
+mod instagram_logo;
+pub use instagram_logo::InstagramLogo;
+
+mod linkedin_logo;
+pub use linkedin_logo::LinkedinLogo;
