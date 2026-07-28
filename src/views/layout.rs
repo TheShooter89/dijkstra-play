@@ -1,4 +1,7 @@
-use crate::components::Navbar;
+use crate::components::{
+    DijkstraLogo, Footer, FooterAside, FooterContactsNav, GithubLogo, InstagramLogo, LinkedinLogo,
+    Navbar,
+};
 use crate::Route;
 use dioxus::prelude::*;
 
@@ -20,10 +23,51 @@ pub fn Layout() -> Element {
         // the [`Home`] or [`Blog`] component depending on the current route.
         Outlet::<Route> {}
 
-        div {
+        Footer {
             id: "footer",
-            // class: "mt-10",
-            h1 { "FOOTER!!!" }
+            FooterAside {
+                p {
+                    class: "text-blue-900 text-shadow-xs/20",
+                    "made with 💛️💙️ and ☕️ by "
+                    Link {
+                        to: "https://github.com/TheShooter89",
+                        new_tab: true,
+                        span {
+                            class: "font-bold",
+                            "tanque"
+                        }
+                    }
+                    " - Copyright © 2026 - All right reserved"
+                }
+            }
+            FooterContactsNav {
+                class: "items-center",
+                p {
+                    class: "text-blue-900 text-shadow-xs/20",
+                    "Wanna hire me? Find me on:"
+                }
+                Link {
+                    to: "https://github.com/TheShooter89",
+                    new_tab: true,
+                    GithubLogo {
+                        class: "fill-blue-900 h-8",
+                    }
+                }
+                Link {
+                    to: "https://www.instagram.com/theshooter89/",
+                    new_tab: true,
+                    InstagramLogo {
+                        class: "fill-blue-900 h-8",
+                    }
+                }
+                Link {
+                    to: "https://www.linkedin.com/in/francesco-paoletti-79b50849/",
+                    new_tab: true,
+                    LinkedinLogo {
+                        class: "fill-blue-900 h-8",
+                    }
+                }
+            }
         }
     }
 }
