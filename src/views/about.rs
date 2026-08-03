@@ -38,7 +38,7 @@ pub fn About() -> Element {
                         Link {
                             //
                             class: "btn btn-primary",
-                            to: Route::Home {  },
+                            to: Route::Legacy {  },
                             "BOMB THE KERCH BRIDGE"
                         }
                     }

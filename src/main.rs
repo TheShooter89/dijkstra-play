@@ -2,7 +2,7 @@
 // need dioxus
 use dioxus::prelude::*;
 
-use views::{About, Blog, Home, Instructions, Layout};
+use views::{About, Blog, Home, Instructions, Layout, Legacy};
 
 mod utils;
 
@@ -34,6 +34,8 @@ enum Route {
         About {},
         #[route("/blog/:id")]
         Blog { id: i32 },
+        #[route("/legacy")]
+        Legacy {},
 }
 
 // We can import assets in dioxus with the `asset!` macro. This macro takes a path to an asset relative to the crate root.
