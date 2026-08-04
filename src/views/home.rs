@@ -1,5 +1,5 @@
 use crate::{
-    components::{Echo, Hero, HeroContent},
+    components::{App, Echo, Hero, HeroContent},
     Route,
 };
 use dioxus::prelude::*;
@@ -114,6 +114,7 @@ pub fn Home() -> Element {
                     }
                 }
             }
+            App {  }
         }
     }
 }

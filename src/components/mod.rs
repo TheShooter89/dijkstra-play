@@ -5,6 +5,9 @@
 mod hero;
 pub use hero::{Hero, HeroContent};
 
+mod app;
+pub use app::App;
+
 mod echo;
 pub use echo::Echo;
 
