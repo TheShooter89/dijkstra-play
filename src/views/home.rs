@@ -1,4 +1,7 @@
-use crate::components::{Echo, Hero, HeroContent};
+use crate::{
+    components::{Echo, Hero, HeroContent},
+    Route,
+};
 use dioxus::prelude::*;
 
 const HEADER_SVG: Asset = asset!("/assets/header.svg");
@@ -19,27 +22,98 @@ pub fn Home() -> Element {
             id: "home-page",
             class: "grow",
 
-        Hero {
-            class: "bg-base-200",
-            HeroContent {
-                div {
-                    // Attributes should be defined in the element before any children
-                    id: "hero",
-                    // After all attributes are defined, we can define child elements and components
-                    img { src: HEADER_SVG, id: "header" }
-                    div { id: "links",
-                        // The RSX macro also supports text nodes surrounded by quotes
-                        a { href: "https://dioxuslabs.com/learn/0.7/", "📚 Learn Dioxus" }
-                        a { href: "https://dioxuslabs.com/awesome", "🚀 Awesome Dioxus" }
-                        a { href: "https://github.com/dioxus-community/", "📡 Community Libraries" }
-                        a { href: "https://github.com/DioxusLabs/sdk", "⚙️ Dioxus Development Kit" }
-                        a { href: "https://marketplace.visualstudio.com/items?itemName=DioxusLabs.dioxus", "💫 VSCode Extension" }
-                        a { href: "https://discord.gg/XgGxMSkvUM", "👋 Community Discord" }
+            Hero {
+                //
+                class: "bg-base-200 min-h-[25vh]",
+                HeroContent {
+                    div {
+                        class: "max-w-[65vw]",
+                        h1 {
+                            //
+                            class: "text-6xl font-bold",
+                            "find "
+                            span {
+                                class: "text-secondary",
+                                "your"
+                            }
+                            " path"
+                        }
+                        p {
+                            class: "py-6",
+                            "try the power of "
+                            Link {
+                                //
+                                // class: "btn btn-primary",
+                                to: Route::Home {  },
+                                "dijkstra-suite"
+                            }
+                            " crate to find the shortest path in the map using Dijkstra algorithm."
+                        }
+                        p {
+                            class: "py-2",
+                            "just press "
+                            Link {
+                                //
+                                // class: "btn btn-primary",
+                                to: Route::Home {  },
+                                "play"
+                            }
+                        }
+                        p {
+                            class: "py-6",
+                            Link {
+                                //
+                                // class: "btn btn-primary",
+                                to: Route::Home {  },
+                                "upload your map"
+                            }
+                            " as csv or choose one from the "
+                            Link {
+                                //
+                                // class: "btn btn-primary",
+                                to: Route::Home {  },
+                                "available examples"
+                            }
+                            "."
+                        }
+                        p {
+                            class: "py-6",
+                            "if you're still not satisfied, you can "
+                            Link {
+                                //
+                                // class: "btn btn-primary",
+                                to: Route::Home {  },
+                                "edit them"
+                            }
+                            " or even create a new map "
+                            Link {
+                                //
+                                // class: "btn btn-primary",
+                                to: Route::Home {  },
+                                "entirely from scratch"
+                            }
+                        }
+                        Link {
+                            //
+                            class: "btn btn-primary",
+                            to: Route::Home {  },
+                            "dijkstra-suite crate"
+                        }
+                        Link {
+                            //
+                            class: "btn btn-primary ml-3",
+                            to: Route::Home {  },
+                            "TRY"
+                        }
+                        Link {
+                            //
+                            class: "btn btn-primary ml-3",
+                            to: Route::Home {  },
+                            "Getting Started"
+                        }
                     }
                 }
             }
-        }
-        Echo {}
         }
     }
 }
