@@ -2,7 +2,9 @@
 // need dioxus
 use dioxus::prelude::*;
 
-use views::{Blog, Home, Navbar};
+use views::{About, Blog, Home, Instructions, Layout, Legacy};
+
+mod utils;
 
 /// Define a components module that contains all shared components for our app.
 mod components;
@@ -19,17 +21,21 @@ mod views;
 enum Route {
     // The layout attribute defines a wrapper for all routes under the layout. Layouts are great for wrapping
     // many routes with a common UI like a navbar.
-    #[layout(Navbar)]
+    #[layout(Layout)]
         // The route attribute defines the URL pattern that a specific route matches. If that pattern matches the URL,
         // the component for that route will be rendered. The component name that is rendered defaults to the variant name.
         #[route("/")]
         Home {},
         // The route attribute can include dynamic parameters that implement [`std::str::FromStr`] and [`std::fmt::Display`] with the `:` syntax.
         // In this case, id will match any integer like `/blog/123` or `/blog/-456`.
+        #[route("/instructions/:id")]
+        Instructions { id: i32 },
+        #[route("/about")]
+        About {},
         #[route("/blog/:id")]
-        // Fields of the route variant will be passed to the component as props. In this case, the blog component must accept
-        // an `id` prop of type `i32`.
         Blog { id: i32 },
+        #[route("/legacy")]
+        Legacy {},
 }
 
 // We can import assets in dioxus with the `asset!` macro. This macro takes a path to an asset relative to the crate root.
@@ -54,6 +60,29 @@ fn main() {
 /// Components should be annotated with `#[component]` to support props, better error messages, and autocomplete
 #[component]
 fn App() -> Element {
+    // +++++++++++++ INJECT HTML ELEMENT ATTRIBUTES +++++++++++++
+    // we need to set classes on html and body elements, but rsx!
+    // macro only affects elements children of body, so we need to
+    // use document::eval() that makes a JS call once both elements
+    // has been mounted on DOM
+    //
+    // also, we set Tailwind class 'contents' on the wrapping div
+    // that dioxus automatically injects:
+    // display: contents makes the div itself disappear from the
+    // layout box model entirely (it stops participating in
+    // flex/grid sizing, stacking, etc.) while its children still
+    // render normally
+    use_effect(|| {
+        //
+        document::eval(
+            r#"
+            document.documentElement.classList.add("min-h-[100vh]");
+            document.body.className = "flex flex-col min-h-[100vh]";
+            document.getElementById("main").classList.add("contents");
+            "#,
+        );
+    });
+
     // The `rsx!` macro lets us define HTML inside of rust. It expands to an Element with all of our HTML inside.
     rsx! {
         // In addition to element and text (which we will see later), rsx can contain other components. In this case,

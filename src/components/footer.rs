@@ -5,17 +5,16 @@ use dioxus::prelude::*;
 use crate::utils::classes::{concat_with_optional_condition, merge_classes};
 
 #[component]
-pub fn Hero(
+pub fn Footer(
     #[props(default)] id: Option<String>,
     #[props(default)] class: Option<String>,
     #[props(default)] children: Option<Element>,
 ) -> Element {
     rsx! {
-        div {
-            // class: "hero",
+        footer {
             id: id,
             class: merge_classes(
-                "hero",
+                "footer sm:footer-horizontal items-center p-4",
                 class.as_deref(),
             ),
             {children}
@@ -24,21 +23,16 @@ pub fn Hero(
 }
 
 #[component]
-pub fn HeroContent(
+pub fn FooterAside(
     #[props(default)] id: Option<String>,
     #[props(default)] class: Option<String>,
-    #[props(default)] centered: Option<bool>,
     #[props(default)] children: Option<Element>,
 ) -> Element {
     rsx! {
-        div {
+        aside {
             id: id,
             class: merge_classes(
-                concat_with_optional_condition(
-                    "hero-content",
-                    centered,
-                    "text-center",
-                ).as_str(),
+                "grid-flow-col items-center",
                 class.as_deref(),
             ),
             { children }
@@ -47,44 +41,19 @@ pub fn HeroContent(
 }
 
 #[component]
-pub fn HeroOverlay(
+pub fn FooterContactsNav(
     #[props(default)] id: Option<String>,
     #[props(default)] class: Option<String>,
     #[props(default)] children: Option<Element>,
 ) -> Element {
     rsx! {
-        div {
+        nav {
             id: id,
             class: merge_classes(
-                "hero-overlay",
+                "grid-flow-col gap-4 md:place-self-center md:justify-self-end",
                 class.as_deref(),
             ),
             { children }
-        }
-    }
-}
-
-#[component]
-pub fn HeroWithOverlay(
-    #[props(default)] id: Option<String>,
-    #[props(default)] class: Option<String>,
-    #[props(default)] overlay: Option<bool>,
-    #[props(default)] overlay_class: Option<String>,
-    #[props(default)] children: Option<Element>,
-) -> Element {
-    rsx! {
-        div {
-            id: id,
-            class: merge_classes(
-                "hero",
-                class.as_deref(),
-            ),
-            if overlay.unwrap_or(false) {
-                HeroOverlay {
-                    class: overlay_class,
-                }
-            }
-            {children}
         }
     }
 }

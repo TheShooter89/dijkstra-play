@@ -3,21 +3,4 @@
 //! component and an Echo component for fullstack apps to be used in our app.
 
 mod hero;
-pub use hero::{Hero, HeroContent};
-
-mod app;
-pub use app::App;
-
-mod echo;
-pub use echo::Echo;
-
-mod navbar;
-pub use navbar::Navbar;
-
-mod footer;
-pub use footer::{Footer, FooterAside, FooterContactsNav};
-
-pub mod home;
-
-pub mod icons;
-pub use icons::*;
+pub use hero::*;

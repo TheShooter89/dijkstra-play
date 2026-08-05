@@ -12,4 +12,5 @@
   default: true;
   --noise: 1;
   --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'TT Interphase';
+  --font-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Harper';
 }

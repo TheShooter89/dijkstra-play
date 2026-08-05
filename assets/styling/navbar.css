@@ -1,3 +1,11 @@
+.logo-link {
+  font-family: Blade;
+}
+
+.page-link {
+  font-family: Harper;
+}
+
 #navbar {
   display: flex;
   flex-direction: row;

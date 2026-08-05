@@ -14,5 +14,14 @@ pub use home::Home;
 mod blog;
 pub use blog::Blog;
 
-mod navbar;
-pub use navbar::Navbar;
+mod instructions;
+pub use instructions::Instructions;
+
+mod about;
+pub use about::About;
+
+mod layout;
+pub use layout::Layout;
+
+mod legacy;
+pub use legacy::Legacy;
