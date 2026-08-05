@@ -18,7 +18,10 @@ pub fn Home() -> Element {
             class: "grow",
 
             HomeHero { id: "home-hero", class: "mt-8 mb-6 bg-transparent" }
-            App { id: "app" }
+            div {
+                class: "w-full flex justify-center",
+                App { id: "app", class: "w-[88vw] min-h-[40vh]", }
+            }
         }
     }
 }

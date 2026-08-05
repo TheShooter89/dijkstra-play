@@ -2,7 +2,10 @@ use std::collections::HashSet;
 
 use dioxus::prelude::*;
 
-use crate::utils::classes::{concat_with_optional_condition, merge_classes};
+use crate::{
+    components::controls::Controls,
+    utils::classes::{concat_with_optional_condition, merge_classes},
+};
 
 #[component]
 pub fn App(
@@ -15,58 +18,13 @@ pub fn App(
             // class: "hero",
             id: id,
             class: merge_classes(
-                "p-4",
+                "p-4 flex flex-col",
                 class.as_deref(),
             ),
-            nav {
-                //
-                class: "flex justify-center",
-                div {
-                    class: "flex-none",
-                    //
-                    Link {
-                        class: "btn btn-secondary",
-                        to: "#",
-                        "Edit"
-                    }
-                    Link {
-                        class: "btn btn-secondary",
-                        to: "#",
-                        "View"
-                    }
-                }
-                div {
-                    //
-                    class: "grow flex justify-center",
-                    Link {
-                        class: "btn btn-secondary",
-                        to: "#",
-                        "Play"
-                    }
-                }
-                div {
-                    //
-                    class: "flex-none",
-                    Link {
-                        class: "btn btn-secondary",
-                        to: "#",
-                        "Upload"
-                    }
-                    Link {
-                        class: "btn btn-secondary",
-                        to: "#",
-                        "Create"
-                    }
-                    Link {
-                        class: "btn btn-secondary",
-                        to: "#",
-                        "Examples"
-                    }
-                }
-            }
+            Controls { id: "app_controls" }
             div {
                 //
-                class: "grid grid-cols-12 gap-4",
+                class: "grow grid grid-cols-12 gap-4",
                 section {
                     //
                     class: "col-span-9 bg-green-500",
