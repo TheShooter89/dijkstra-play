@@ -19,3 +19,9 @@ pub use instagram_logo::InstagramLogo;
 
 mod linkedin_logo;
 pub use linkedin_logo::LinkedinLogo;
+
+mod circle_play;
+pub use circle_play::CirclePlay;
+
+mod filepage;
+pub use filepage::FilePage;

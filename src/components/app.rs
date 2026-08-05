@@ -13,6 +13,7 @@ pub fn App(
     rsx! {
         section {
             // class: "hero",
+            id: id,
             class: merge_classes(
                 "p-4",
                 class.as_deref(),

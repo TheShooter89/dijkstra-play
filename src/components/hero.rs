@@ -13,6 +13,7 @@ pub fn Hero(
     rsx! {
         div {
             // class: "hero",
+            id: id,
             class: merge_classes(
                 "hero",
                 class.as_deref(),
