@@ -1,5 +1,8 @@
 use crate::{
-    components::{App, CirclePlay, CratesIoLogo, Echo, FilePage, Hero, HeroContent},
+    components::{
+        icons::{CirclePlay, CratesIoLogo, FilePage, Icon, TunedIcon},
+        Hero, HeroContent,
+    },
     utils::classes::merge_classes,
     Route,
 };
@@ -97,9 +100,9 @@ pub fn HomeHero(
                         class: "btn btn-neutral bg-white text-black",
                         new_tab: true,
                         to: "https://crates.io/crates/dijkstra-suite",
-                        CratesIoLogo {
-                            //
-                            class: "flex h-6",
+                        TunedIcon {
+                            icon: Icon::CratesIoLogo,
+                            size: "size-[1.8em]",
                         }
                         "DIJKSTRA-SUITE"
                     }
@@ -108,16 +111,21 @@ pub fn HomeHero(
                         class: "btn btn-neutral bg-white text-black ml-3",
                         to: Route::Home {  },
                         "TRY"
-                        CirclePlay {
-                            class: "flex h-6",
+                        // CirclePlay {
+                        //     class: "flex h-6",
+                        // }
+                        TunedIcon {
+                            icon: Icon::CirclePlay,
+                            size: "size-[1.6em]",
                         }
                     }
                     Link {
                         //
                         class: "btn btn-neutral bg-white text-black ml-3",
                         to: Route::Instructions { id: 1 },
-                        FilePage {
-                            class: "flex h-6",
+                        TunedIcon {
+                            icon: Icon::FilePage,
+                            size: "size-[1.8em]",
                         }
                         "Getting Started"
                     }

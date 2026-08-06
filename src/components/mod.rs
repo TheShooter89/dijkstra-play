@@ -20,4 +20,3 @@ pub use footer::{Footer, FooterAside, FooterContactsNav};
 pub mod home;
 
 pub mod icons;
-pub use icons::*;
