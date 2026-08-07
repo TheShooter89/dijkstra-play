@@ -1,6 +1,6 @@
 use crate::{
     components::{
-        icons::{CirclePlay, CratesIoLogo, FilePage, Icon, TunedIcon},
+        icons::{Icon, TunedIcon},
         Hero, HeroContent,
     },
     utils::classes::merge_classes,

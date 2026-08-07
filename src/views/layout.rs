@@ -1,5 +1,5 @@
 use crate::components::{
-    icons::{DijkstraLogo, GithubLogo, Icon, InstagramLogo, LinkedinLogo, TunedIcon},
+    icons::{Icon, TunedIcon},
     Footer, FooterAside, FooterContactsNav, Navbar,
 };
 use crate::Route;
