@@ -22,3 +22,5 @@ pub mod home;
 pub mod controls;
 
 pub mod icons;
+
+pub mod editor;

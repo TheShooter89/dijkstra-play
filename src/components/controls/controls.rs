@@ -56,7 +56,7 @@ pub fn Controls(
             }
             div {
                 //
-                class: "flex-none join {py} {px}",
+                class: "flex-none join {py}",
                 ControlsButton {
                     to: "#",
                     class: "join-item",
