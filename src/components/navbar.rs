@@ -1,5 +1,5 @@
 use crate::{
-    components::icons::{CratesIoLogo, GithubLogo, UkraineFlag},
+    components::icons::{Icon, TunedIcon, UkraineFlag},
     Route,
 };
 use dioxus::prelude::*;
@@ -51,18 +51,20 @@ pub fn Navbar() -> Element {
                     class: "btn btn-xs btn-ghost text-white border-none font-sans text-sm text-shadow-sm/20 flex hover:bg-white hover:text-black hover:text-shadow-none hover:fill-black",
                     new_tab: true,
                     to: "https://github.com/TheShooter89/dijkstra-suite",
-                    GithubLogo {
-                        class: "h-4 flex",
-                    }
+                    // GithubLogo {
+                    //     // class: "h-4 flex",
+                    // }
+                    TunedIcon { icon: Icon::GithubLogo }
                     "Github"
                 }
                 Link {
                     class: "btn btn-xs btn-ghost text-white border-none font-sans text-sm text-shadow-sm/20 flex hover:bg-white hover:text-black hover:text-shadow-none hover:fill-black",
                     new_tab: true,
                     to: "https://crates.io/crates/dijkstra-suite",
-                    CratesIoLogo {
-                        class: "h-4 flex",
-                    }
+                    // CratesIoLogo {
+                    //     class: "h-4 flex",
+                    // }
+                    TunedIcon { icon: Icon::CratesIoLogo, size: "size-[1.4em]" }
                     "Crates.io"
                 }
                 Link {

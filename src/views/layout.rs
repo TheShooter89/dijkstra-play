@@ -1,6 +1,6 @@
 use crate::components::{
-    DijkstraLogo, Footer, FooterAside, FooterContactsNav, GithubLogo, InstagramLogo, LinkedinLogo,
-    Navbar,
+    icons::{Icon, TunedIcon},
+    Footer, FooterAside, FooterContactsNav, Navbar,
 };
 use crate::Route;
 use dioxus::prelude::*;
@@ -49,22 +49,28 @@ pub fn Layout() -> Element {
                 Link {
                     to: "https://github.com/TheShooter89",
                     new_tab: true,
-                    GithubLogo {
-                        class: "fill-blue-900 h-8",
+                    TunedIcon {
+                        icon: Icon::GithubLogo,
+                        size: "size-[2em]",
+                        fill: "fill-blue-900",
                     }
                 }
                 Link {
                     to: "https://www.instagram.com/theshooter89/",
                     new_tab: true,
-                    InstagramLogo {
-                        class: "fill-blue-900 h-8",
+                    TunedIcon {
+                        icon: Icon::InstagramLogo,
+                        size: "size-[2.2em]",
+                        fill: "fill-blue-900",
                     }
                 }
                 Link {
                     to: "https://www.linkedin.com/in/francesco-paoletti-79b50849/",
                     new_tab: true,
-                    LinkedinLogo {
-                        class: "fill-blue-900 h-8",
+                    TunedIcon {
+                        icon: Icon::LinkedinLogo,
+                        size: "size-[2.2em]",
+                        fill: "fill-blue-900",
                     }
                 }
             }
